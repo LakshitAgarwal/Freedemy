@@ -85,7 +85,7 @@
     <div class="container">
       <div class="row">
         <div class="content" id="content">
-          <% currentLinks.forEach(function(link) { %>
+          <% currentLinks.forEach(function(link, index) { %>
           <a href="/course/<%=page %>/<%= link.h1 %>">
             <div class="card flex flex-col justify-between pb-6">
               <img src="<%= link.image %>" alt="" />
@@ -98,7 +98,26 @@
               </button>
             </div>
           </a>
-          <% }); %>
+          <% if ((index + 1) % 4 === 0) { %>
+          <!-- Insert the ad here after every 3rd card -->
+          <div class="ad">
+            <div class="ad">
+              <iframe
+                data-aa="2241490"
+                src="//acceptable.a-ads.com/2241490"
+                style="
+                  border: 0px;
+                  padding: 0;
+                  max-width: 350px;
+                  min-width: 250px;
+                  height: 450px;
+                  overflow: hidden;
+                  background-color: transparent;
+                "
+              ></iframe>
+            </div>
+          </div>
+          <% } %> <% }); %>
         </div>
       </div>
     </div>
