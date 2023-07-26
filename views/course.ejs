@@ -8,12 +8,7 @@
       src="https://kit.fontawesome.com/2b9cdc1c9a.js"
       crossorigin="anonymous"
     ></script>
-    <link
-      rel="shortcut icon"
-      href="/public/images/favicon.png"
-      type="image/x-icon"
-    />
-    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -27,7 +22,25 @@
     <%- include('header.ejs') %>
 
     <center>
-      <div class="ad">
+      <div class="ad block md:hidden" style="padding: 10px">
+        <script type="text/javascript">
+          atOptions = {
+            key: "4c2ac7c7b6434e4ae0cde5bbdcd53b2e",
+            format: "iframe",
+            height: 250,
+            width: 250,
+            params: {},
+          };
+          document.write(
+            "<scr" +
+              'ipt type="text/javascript" src="http' +
+              (location.protocol === "https:" ? "s" : "") +
+              '://www.profitabledisplaynetwork.com/4c2ac7c7b6434e4ae0cde5bbdcd53b2e/invoke.js"></scr' +
+              "ipt>"
+          );
+        </script>
+      </div>
+      <div class="ad hidden md:block">
         <script type="text/javascript">
           atOptions = {
             key: "9a9abc358dc2437f4dc83177126817aa",
@@ -54,7 +67,7 @@
         <img src="<%= course.image %>" class="headerImg" alt="" />
         <br />
         <center>
-          <div class="ad">
+          <div class="ad hidden md:block">
             <script type="text/javascript">
               atOptions = {
                 key: "4c2ac7c7b6434e4ae0cde5bbdcd53b2e",
@@ -92,7 +105,7 @@
           </h2>
         </div>
 
-        <div class="ad">
+        <div class="ad hidden md:block">
           <script type="text/javascript">
             atOptions = {
               key: "4c5b461fa6e5d87628178a41b6b96e9d",
@@ -111,7 +124,7 @@
           </script>
         </div>
 
-        <div class="deskBtn text-center md:text-left md:ml-0 mb-7">
+        <div class="deskBtn text-center md:text-left md:ml-0 mb-7 ml-2">
           <a href="<%= course.link %>" target="_blank">
             <button class="btn">Enroll Now</button>
           </a>
@@ -131,14 +144,6 @@
 
     <div class="container">
       <div class="row">
-        <div class="ad" style="padding: 20px 80px">
-          <script
-            async="async"
-            data-cfasync="false"
-            src="//pl20165272.highwaycpmrevenue.com/878a4cf5b32ed30d147f0b43cb27c07a/invoke.js"
-          ></script>
-          <div id="container-878a4cf5b32ed30d147f0b43cb27c07a"></div>
-        </div>
         <div class="content">
           <% randomCourses.forEach(function(link) { %>
           <a href="/course/<%=randomPage %>/<%= link.h1 %>">
@@ -156,7 +161,16 @@
       </div>
     </div>
     <center>
-      <div class="ad">
+      <div class="ad" style="width: 70%">
+        <script
+          async="async"
+          data-cfasync="false"
+          src="//pl20165272.highwaycpmrevenue.com/878a4cf5b32ed30d147f0b43cb27c07a/invoke.js"
+        ></script>
+        <div id="container-878a4cf5b32ed30d147f0b43cb27c07a"></div>
+      </div>
+
+      <div class="ad hidden md:block">
         <script type="text/javascript">
           atOptions = {
             key: "9a9abc358dc2437f4dc83177126817aa",
