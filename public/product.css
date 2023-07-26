@@ -13,6 +13,17 @@
   display: block;
 }
 
+.ad{
+  padding: 25px 25px 25px 0px;
+}
+
+@media screen and (max-width: 768px){
+  .ad{
+    padding: 25px;
+  }
+}
+  
+
 /* Style the hamburger menu */
 .topnav a.icon {
   background: black;
