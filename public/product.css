@@ -15,11 +15,13 @@
 
 .ad{
   padding: 25px 25px 25px 0px;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 768px){
   .ad{
     padding: 25px;
+    overflow: hidden;
   }
 }
   
