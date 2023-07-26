@@ -14,6 +14,10 @@ const app = express();
 const cache = new NodeCache();
 const scrapeInterval = 3600; // Cache expiration time in seconds
 
+const { JSDOM } = require("jsdom");
+const { window } = new JSDOM("");
+const DOMPurify = require("dompurify")(window);
+
 // Define an async function to fetch and cache data for all pages
 async function cacheAllPages() {
   const totalPages = 20; // Adjust the total number of pages as needed
@@ -64,6 +68,11 @@ cacheAllPages().then(() => {
         allLinks[page] = newLinks;
         cache.set("allLinks", allLinks, scrapeInterval);
       }
+
+      newLinks.forEach((link) => {
+        link.desc = DOMPurify.sanitize(link.desc);
+      });
+
       currentLinks = newLinks;
 
       // Render the EJS template with the links
