@@ -28,6 +28,22 @@ function myFunction() {
   x.classList.toggle("shownav");
 }
 
+function truncateText() {
+  const courseDescriptions = document.querySelectorAll(".courseDescription");
+  const maxCharacters = 100; // Set the maximum number of characters here
+
+  courseDescriptions.forEach((desc) => {
+    const text = desc.textContent.trim();
+    if (text.length > maxCharacters) {
+      const truncatedText = text.slice(0, maxCharacters) + "...";
+      desc.textContent = truncatedText;
+    }
+  });
+}
+
+// Call the function once the page loads
+document.addEventListener("DOMContentLoaded", truncateText);
+
 // Function to check if an element is in the viewport
 function isElementInViewport(element) {
   var rect = element.getBoundingClientRect();
