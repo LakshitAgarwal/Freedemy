@@ -612,6 +612,10 @@
   }
 }
 
-.deskBtn{
-  margin-left: 2.4rem;
+@media screen and (min-width: 768px) {
+  
+  .deskBtn{
+    margin-left: 2.4rem;
+  }
+
 }
