@@ -12,7 +12,7 @@ const {
 
 const app = express();
 const cache = new NodeCache();
-const scrapeInterval = 3600; // Cache expiration time in seconds
+const scrapeInterval = 54000; // Cache expiration time in seconds
 
 const { JSDOM } = require("jsdom");
 const { window } = new JSDOM("");

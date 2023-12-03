@@ -51,7 +51,7 @@ async function scrapSingleCourse(courseLink) {
 
   const courseLinkData = courseLinkResponse.data;
   const courseLinkPage = cheerio.load(courseLinkData);
-  const couponLink = courseLinkPage("#couponLink").attr("href");
+  const couponLink = courseLinkPage("div.segment a").attr("href");
   console.log("Extracted couponLink:", couponLink);
 
   return couponLink;
